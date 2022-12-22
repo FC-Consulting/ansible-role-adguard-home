@@ -1,0 +1,134 @@
+bind_host: {{bind_host}}
+bind_port: {{bind_port}}
+beta_bind_port: {{beta_bind_port}}
+users:
+  {{users}}
+auth_attempts: {{auth_attempts}}
+block_auth_min: {{block_auth_min}}
+http_proxy: {{http_proxy}}
+language: {{language}}
+debug_pprof: {{debug_pprof}}
+web_session_ttl: {{web_session_ttl}}
+dns:
+  bind_hosts:
+    {{dns_bind_hosts}}
+  port: {{dns_port}}
+  statistics_interval: {{dns_statistics_interval}}
+  querylog_enabled: {{dns_querylog_enabled}}
+  querylog_file_enabled: {{dns_querylog_file_enabled}}
+  querylog_interval: {{dns_querylog_interval}}
+  querylog_size_memory: {{dns_querylog_size_memory}}
+  anonymize_client_ip: {{dns_anonymize_client_ip}}
+  protection_enabled: {{dns_protection_enabled}}
+  blocking_mode: {{dns_blocking_mode}}
+  blocking_ipv4: {{dns_blocking_ipv4}}
+  blocking_ipv6: {{dns_blocking_ipv6}}
+  blocked_response_ttl: {{dns_blocked_response_ttl}}
+  parental_block_host: {{dns_parental_block_host}}
+  safebrowsing_block_host: {{dns_safebrowsing_block_host}}
+  ratelimit: {{dns_ratelimit}}
+  ratelimit_whitelist: {{dns_ratelimit_whitelist}}
+  refuse_any: {{dns_refuse_any}}
+  upstream_dns:
+    {{dns_upstream_dns}}
+  upstream_dns_file: {{dns_upstream_dns_file}}
+  bootstrap_dns:
+    {{dns_bootstrap_dns}}
+  all_servers: {{dns_all_servers}}
+  fastest_addr: {{dns_fastest_addr}}
+  fastest_timeout: {{dns_fastest_timeout}}
+  allowed_clients: {{dns_allowed_clients}}
+  disallowed_clients: {{dns_disallowed_clients}}
+  blocked_hosts:
+    {{dns_blocked_hosts}}
+  trusted_proxies:
+    {{dns_trusted_proxies}}
+  cache_size: {{dns_cache_size}}
+  cache_ttl_min: {{dns_cache_ttl_min}}
+  cache_ttl_max: {{dns_cache_ttl_max}}
+  cache_optimistic: {{dns_cache_optimistic}}
+  bogus_nxdomain: {{dns_bogus_nxdomain}}
+  aaaa_disabled: {{dns_aaaa_disabled}}
+  enable_dnssec: {{dns_enable_dnssec}}
+  edns_client_subnet: {{dns_edns_client_subnet}}
+  max_goroutines: {{dns_max_goroutines}}
+  handle_ddr: {{dns_handle_ddr}}
+  ipset: {{dns_ipset}}
+  ipset_file: {{dns_ipset_file}}
+  filtering_enabled: {{dns_filtering_enabled}}
+  filters_update_interval: {{dns_filters_update_interval}}
+  parental_enabled: {{dns_parental_enabled}}
+  safesearch_enabled: {{dns_safesearch_enabled}}
+  safebrowsing_enabled: {{dns_safebrowsing_enabled}}
+  safebrowsing_cache_size: {{dns_safebrowsing_cache_size}}
+  safesearch_cache_size: {{dns_safesearch_cache_size}}
+  parental_cache_size: {{dns_parental_cache_size}}
+  cache_time: {{dns_cache_time}}
+  rewrites: {{dns_rewrites}}
+  blocked_services: {{dns_blocked_services}}
+  upstream_timeout: {{dns_upstream_timeout}}
+  private_networks: {{dns_private_networks}}
+  use_private_ptr_resolvers: {{dns_use_private_ptr_resolvers}}
+  local_ptr_upstreams: {{dns_local_ptr_upstreams}}
+  serve_http3: {{dns_serve_http3}}
+  use_http3_upstreams: {{dns_use_http3_upstreams}}
+tls:
+  enabled: {{tls_enabled}}
+  server_name: {{tls_server_name}}
+  force_https: {{tls_force_https}}
+  port_https: {{tls_port_https}}
+  port_dns_over_tls: {{tls_port_dns_over_tls}}
+  port_dns_over_quic: {{tls_port_dns_over_quic}}
+  port_dnscrypt: {{tls_port_dnscrypt}}
+  dnscrypt_config_file: {{tls_dnscrypt_config_file}}
+  allow_unencrypted_doh: {{tls_allow_unencrypted_doh}}
+  certificate_chain: {{tls_certificate_chain}}
+  private_key: {{tls_private_key}}
+  certificate_path: {{tls_certificate_path}}
+  private_key_path: {{tls_private_key_path}}
+  strict_sni_check: {{tls_strict_sni_check}}
+filters:
+    {{filters}}
+whitelist_filters:
+    {{whitelist_filters}}
+user_rules:
+    {{user_rules}}
+dhcp:
+  enabled: {{dhcp_enabled}}
+  interface_name: {{dhcp_interface_name}}
+  local_domain_name: {{dhcp_local_domain_name}}
+  dhcpv4:
+    gateway_ip: {{dhcp_dhcpv4_gateway_ip}}
+    subnet_mask: {{dhcp_dhcpv4_subnet_mask}}
+    range_start: {{dhcp_dhcpv4_range_start}}
+    range_end: {{dhcp_dhcpv4_range_end}}
+    lease_duration: {{dhcp_dhcpv4_lease_duration}}
+    icmp_timeout_msec: {{dhcp_dhcpv4_icmp_timeout_msec}}
+    options:
+        {{dhcp_dhcpv4_options}}
+  dhcpv6:
+    range_start: {{dhcp_dhcpv6_range_start}}
+    lease_duration: {{dhcp_dhcpv6_lease_duration}}
+    ra_slaac_only: {{dhcp_dhcpv6_ra_slaac_only}}
+    ra_allow_slaac: {{dhcp_dhcpv6_ra_allow_slaac}}
+clients:
+  runtime_sources:
+    whois: {{clients_runtime_sources_whois}}
+    arp: {{clients_runtime_sources_arp}}
+    rdns: {{clients_runtime_sources_rdns}}
+    dhcp: {{clients_runtime_sources_dhcp}}
+    hosts: {{clients_runtime_sources_hosts}}
+  persistent:
+    {{clients_persistent}}
+log_file: {{log_file}}
+log_max_backups: {{log_max_backups}}
+log_max_size: {{log_max_size}}
+log_max_age: {{log_max_age}}
+log_compress: {{log_compress}}
+log_localtime: {{log_localtime}}
+verbose: {{verbose}}
+os:
+  group: {{os_group}}
+  user: {{os_user}}
+  rlimit_nofile: {{os_rlimit_nofile}}
+schema_version: {{schema_version}}

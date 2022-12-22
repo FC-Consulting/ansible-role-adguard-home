@@ -1,0 +1,27 @@
+---
+
+- name: "{{ ansible_distribution | lower }} | {{ ansible_distribution_release }} - Download installation script"
+  ansible.builtin.get_url:
+    url: https://raw.githubusercontent.com/AdguardTeam/AdGuardHome/master/scripts/install.sh
+    dest: ~/AdGuardHome_Install.sh
+    mode: '0740'
+
+- name: "{{ ansible_distribution | lower }} | {{ ansible_distribution_release }} - Installation"
+  ansible.builtin.command: ~/AdGuardHome_Install.sh -r
+
+- name: "{{ ansible_distribution | lower }} | {{ ansible_distribution_release }} - Clean"
+  ansible.builtin.file:
+    path: ~/AdGuardHome_Install.sh
+    state: absent
+
+- name: "{{ ansible_distribution | lower }} | {{ ansible_distribution_release }} - Ensure service is enabled"
+  service:
+    name: AdGuardHome
+    enabled: true
+
+- name: "{{ ansible_distribution | lower }} | {{ ansible_distribution_release }} - Configuration"
+  template:
+    src: AdGuardHome.yaml.j2
+    dest: /opt/AdGuardHome/AdGuardHome.yaml
+    mode: 0644
+  notify: AdGuardHome_Restart

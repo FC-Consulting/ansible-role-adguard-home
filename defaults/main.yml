@@ -1,0 +1,137 @@
+---
+bind_host: 0.0.0.0
+bind_port: 80
+beta_bind_port: 0
+users:
+  - name: admin
+    password: $2a$10$Fl2A4huYIQ6eHbYTyGIndeBfIqbkDnixYjTRJzDgbJ2aVJrfeiABy
+auth_attempts: 5
+block_auth_min: 15
+http_proxy: ""
+language: ""
+debug_pprof: false
+web_session_ttl: 720
+dns_bind_hosts:
+  - 0.0.0.0
+dns_port: 53
+dns_statistics_interval: 1
+dns_querylog_enabled: true
+dns_querylog_file_enabled: true
+dns_querylog_interval: 2160h
+dns_querylog_size_memory: 1000
+dns_anonymize_client_ip: false
+dns_protection_enabled: true
+dns_blocking_mode: default
+dns_blocking_ipv4: ""
+dns_blocking_ipv6: ""
+dns_blocked_response_ttl: 10
+dns_parental_block_host: family-block.dns.adguard.com
+dns_safebrowsing_block_host: standard-block.dns.adguard.com
+dns_ratelimit: 20
+dns_ratelimit_whitelist: []
+dns_refuse_any: true
+dns_upstream_dns:
+  - https://dns10.quad9.net/dns-query
+dns_upstream_dns_file: ""
+dns_bootstrap_dns:
+  - 9.9.9.10
+  - 149.112.112.10
+  - 2620:fe::10
+  - 2620:fe::fe:10
+dns_all_servers: false
+dns_fastest_addr: false
+dns_fastest_timeout: 1s
+dns_allowed_clients: []
+dns_disallowed_clients: []
+dns_blocked_hosts:
+  - version.bind
+  - id.server
+  - hostname.bind
+dns_trusted_proxies:
+  - 127.0.0.0/8
+  - ::1/128
+dns_cache_size: 4194304
+dns_cache_ttl_min: 0
+dns_cache_ttl_max: 0
+dns_cache_optimistic: false
+dns_bogus_nxdomain: []
+dns_aaaa_disabled: false
+dns_enable_dnssec: false
+dns_edns_client_subnet: false
+dns_max_goroutines: 300
+dns_handle_ddr: true
+dns_ipset: []
+dns_ipset_file: ""
+dns_filtering_enabled: true
+dns_filters_update_interval: 24
+dns_parental_enabled: false
+dns_safesearch_enabled: false
+dns_safebrowsing_enabled: false
+dns_safebrowsing_cache_size: 1048576
+dns_safesearch_cache_size: 1048576
+dns_parental_cache_size: 1048576
+dns_cache_time: 30
+dns_rewrites: []
+dns_blocked_services: []
+dns_upstream_timeout: 10s
+dns_private_networks: []
+dns_use_private_ptr_resolvers: true
+dns_local_ptr_upstreams: []
+dns_serve_http3: false
+dns_use_http3_upstreams: false
+tls_enabled: false
+tls_server_name: ""
+tls_force_https: false
+tls_port_https: 443
+tls_port_dns_over_tls: 853
+tls_port_dns_over_quic: 853
+tls_port_dnscrypt: 0
+tls_dnscrypt_config_file: ""
+tls_allow_unencrypted_doh: false
+tls_certificate_chain: ""
+tls_private_key: ""
+tls_certificate_path: ""
+tls_private_key_path: ""
+tls_strict_sni_check: false
+filters:
+  - enabled: true
+    url: https://adguardteam.github.io/HostlistsRegistry/assets/filter_1.txt
+    name: AdGuard DNS filter
+    id: 1
+  - enabled: false
+    url: https://adguardteam.github.io/HostlistsRegistry/assets/filter_2.txt
+    name: AdAway Default Blocklist
+    id: 2
+whitelist_filters: []
+user_rules: []
+dhcp_enabled: false
+dhcp_interface_name: ""
+dhcp_local_domain_name: lan
+dhcp_dhcpv4_gateway_ip: ""
+dhcp_dhcpv4_subnet_mask: ""
+dhcp_dhcpv4_range_start: ""
+dhcp_dhcpv4_range_end: ""
+dhcp_dhcpv4_lease_duration: 86400
+dhcp_dhcpv4_icmp_timeout_msec: 1000
+dhcp_dhcpv4_options: []
+dhcp_dhcpv6_range_start: ""
+dhcp_dhcpv6_lease_duration: 86400
+dhcp_dhcpv6_ra_slaac_only: false
+dhcp_dhcpv6_ra_allow_slaac: false
+clients_runtime_sources_whois: true
+clients_runtime_sources_arp: true
+clients_runtime_sources_rdns: true
+clients_runtime_sources_dhcp: true
+clients_runtime_sources_hosts: true
+clients_persistent: []
+log_file: ""
+log_max_backups: 0
+log_max_size: 100
+log_max_age: 3
+log_compress: false
+log_localtime: false
+verbose: false
+os_group: ""
+os_user: ""
+os_rlimit_nofile: 0
+schema_version: 14
